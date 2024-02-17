@@ -122,6 +122,7 @@ class TestBase_to_json_string(unittest.TestCase):
         list_dicts = [r1.to_dictionary(), r2.to_dictionary()]
         self.assertTrue(len(Base.to_json_string(list_dicts)) == 106)
 
+
     def test_to_json_string_square_type(self):
         s = Square(10, 2, 3, 4)
         self.assertEqual(str, type(Base.to_json_string([s.to_dictionary()])))
@@ -543,7 +544,6 @@ class TestBase_load_from_file_csv(unittest.TestCase):
     def test_load_from_file_csv_no_file(self):
         output = Square.load_from_file_csv()
         self.assertEqual([], output)
-
 
 
 if __name__ == "__main__":
