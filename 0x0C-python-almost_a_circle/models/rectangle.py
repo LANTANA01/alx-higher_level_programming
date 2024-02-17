@@ -170,7 +170,3 @@ class Rectangle(Base):
         }
 
         return rec_dict
-
-
-if __name__ == "__main__":
-    pass
