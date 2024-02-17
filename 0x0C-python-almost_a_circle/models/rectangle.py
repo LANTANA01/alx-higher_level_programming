@@ -1,6 +1,6 @@
 #!/bin/usr/python3
 """
-Rectangle module
+Defines Rectangle module.
 """
 from models.base import Base
 
