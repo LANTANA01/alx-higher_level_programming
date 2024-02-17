@@ -5,29 +5,29 @@ import json
 import csv
 import turtle
 
-class Base:
-    """Represent a base model class.
 
-    This is the "base" for all other classes in project 0x0C*.
+class Base:
+    """Base model.
+
+    This Represents the "base" for all other classes in project 0x0C*.
 
     Private Class Attributes:
-        __nb_object (int): Number of instantiated Bases or Objects.
+        __nb_object (int): Number of instantiated Bases.
     """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialize a new Base obj.
+        """Initialize a new Base.
 
         Args:
-            id (int): The key identifier of the new Base obj created.
+            id (int): The identity of the new Base.
         """
         if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -42,7 +42,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Writes the JSON serialization of a list of objects to a file.
+        """Write the JSON serialization of a list of objects to a file.
 
         Args:
             list_objs (list): A list of inherited Base instances.
@@ -57,7 +57,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Returns the deserialization of a JSON string.
+        """Return the deserialization of a JSON string.
 
         Args:
             json_string (str): A JSON str representation of a list of dicts.
@@ -86,12 +86,12 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Returns a list of classes instantiated from a file of JSON strings.
+        """Return a list of classes instantiated from a file of JSON strings.
 
         Reads from `<cls.__name__>.json`.
 
         Returns:
-            If the file does not exist - returns an empty list.
+            If the file does not exist - an empty list.
             Otherwise - a list of instantiated classes.
         """
         filename = str(cls.__name__) + ".json"
@@ -104,7 +104,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """Writes a CSV serialization of a list of objects to a file.
+        """Write the CSV serialization of a list of objects to a file.
 
         Args:
             list_objs (list): A list of inherited Base instances.
@@ -124,13 +124,12 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """
-        Returns a list of classes instantiated from a CSV file.
+        """Return a list of classes instantiated from a CSV file.
 
         Reads from `<cls.__name__>.csv`.
 
         Returns:
-            If the file does not exist - an empty list is returned.
+            If the file does not exist - an empty list.
             Otherwise - a list of instantiated classes.
         """
         filename = cls.__name__ + ".csv"
@@ -149,12 +148,12 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-    """Draws Rectangles and Squares using the turtle module.
+        """Draw Rectangles and Squares using the turtle module.
 
         Args:
-            list_rectangles (list): A list of Rectangle objects to be drawn.
-            list_squares (list): A list of Square objects to be drawn.
-    """    
+            list_rectangles (list): A list of Rectangle objects to draw.
+            list_squares (list): A list of Square objects to draw.
+        """
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
         turt.pensize(3)
