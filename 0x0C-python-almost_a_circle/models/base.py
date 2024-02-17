@@ -3,6 +3,7 @@
 """Defines a base model class."""
 import json
 import csv
+import turtle
 
 class Base:
     """Represent a base model class.
@@ -145,15 +146,15 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
-"""
+
     @staticmethod
     def draw(list_rectangles, list_squares):
-        Draws Rectangles and Squares using the turtle module.
+    """Draws Rectangles and Squares using the turtle module.
 
         Args:
             list_rectangles (list): A list of Rectangle objects to be drawn.
             list_squares (list): A list of Square objects to be drawn.
-        
+    """    
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
         turt.pensize(3)
@@ -186,4 +187,3 @@ class Base:
             turt.hideturtle()
 
         turtle.exitonclick()
-"""
