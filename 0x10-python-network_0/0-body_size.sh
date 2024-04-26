@@ -1,4 +1,4 @@
 #!/bin/bash
 #Displays size of body of the response.
-curl -s "$1" | wc -c
+curl -sI "$1" | grep -i Content-Length | awk '{print $2}'
 
