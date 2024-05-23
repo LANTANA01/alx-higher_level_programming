@@ -1,0 +1,1 @@
+proccess.argv[] in JS, sys.argv[] in python
