@@ -1,0 +1,1 @@
+Javascript NOT java!
