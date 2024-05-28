@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//Print square in x pattern
+// Print square in x pattern
 
 if (process.argv[2] === undefined || isNaN(process.argv[2])) {
   console.log('Missing size');
